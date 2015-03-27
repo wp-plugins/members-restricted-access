@@ -9,7 +9,7 @@ Stable tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin create shortcodes to restrict the access to users.
+This plugin creates shortcodes to restrict the access to users (visitors, members or by an specific role).
 
 == Description ==
 

@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Members Restricted Access
  * Plugin URI: http://www.jumptoweb.com
- * Description: This plugin create shortcodes to restrict the access to Visitors or Members.
- * Version: 1.0
+ * Description: This plugin creates shortcodes to restrict the access to Visitors, Members or by role.
+ * Version: 2.0
  * Author: Manuel Costales
  * Author URI: http://www.manuelcostales.com
  */
