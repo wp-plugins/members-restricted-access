@@ -5,7 +5,7 @@ Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: restrict access, members, visitor, restric by role
 Requires at least: 3.0.1
 Tested up to: 4.1.1
-Stable tag: 2.0
+Stable tag: 2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,13 +17,17 @@ This plugin create shortcodes to restrict the access to Visitors, Members or spe
 
 To use you need to create the content and wrap it with these shortcodes: [visitor], [member] or [showifrole].
 
+* You can use the parameters 'is' and 'msg'. If you not specify them, the default value will be use instead.
+* The paramater 'is' is use it with the shortcode [showifrole] to check for that specific user. The default value is 'administrator'.
+* And 'msg' is the message the system is going to show. You can use html code with single apostrophes ('). The default value is null.
+
 Examples:
 
-[visitor]
+'[visitor]
    content only visible to visitors
 [/visitor]
 
-[member]
+[member msg="You need to <a href='/wp-login'>Login</a> to see this content."]
    content only visible to members
 [/member]
 
@@ -31,9 +35,9 @@ Examples:
    content only visible for administrators
 [showifrole]
 
-[showifrole is=author]
+[showifrole is=author msg="You don't have the required role."]
    content only visible for authors
-[showifrole]
+[showifrole]'
 
 == Installation ==
 
@@ -51,6 +55,10 @@ or
 Send me an email at mcostales@jumptoweb.com and I will answer you as soon as I can.
 
 == Changelog ==
+
+= 2.1 =
+- Add the parameters for message in the members, visitors and showifrole shortcodes.
+- Add a default value for 'is' and 'msg'.
 
 = 2.0 =
 - Added the shortcode to check by role.
