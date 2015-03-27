@@ -24,3 +24,13 @@ function member_check_shortcode_mc( $atts, $content = null ) {
 		return $content;
 	return '';
 }
+
+//shorcode to check which member is[showifrole]...[/showifrole]
+add_shortcode( 'showifrole', 'showifrole_is_shortcode_mc' );
+function showifrole_is_shortcode_mc( $atts, $content = null ) {
+	$is = $atts['is'];
+	$user = wp_get_current_user();
+	if (in_array ($is, (array) $user->roles )) {
+		return $content;
+	}
+}
